@@ -1,0 +1,14 @@
+<!-- Supabase Auth email template: "Magic Link". Uses token_hash so the link works in any browser. -->
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 480px; margin: 0 auto; padding: 24px; color: #24201a;">
+  <h2 style="font-family: Georgia, serif; font-weight: 600; margin: 0 0 12px;">Sign in to the family house calendar</h2>
+  <p style="margin: 0 0 20px; color: #6b6355;">Click the button to sign in. The link works once and expires in an hour.</p>
+  <p style="margin: 0 0 24px;">
+    <a href="{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&type=email"
+       style="display: inline-block; background: #2c5a4b; color: #f8f5ee; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      Sign in
+    </a>
+  </p>
+  <p style="margin: 0 0 6px; color: #6b6355;">Or enter this code on the sign-in page:</p>
+  <p style="font-size: 28px; letter-spacing: 6px; font-weight: 700; margin: 0 0 24px; font-family: monospace;">{{ .Token }}</p>
+  <p style="font-size: 12px; color: #8a8173;">If you didn't ask to sign in, you can ignore this email.</p>
+</div>
